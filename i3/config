@@ -4,27 +4,31 @@ exec --no-startup-id picom &
 exec --no-startup-id nitrogen --restore &
 
 # gaps and borders
-gaps inner 0
-gaps outer 0
-default_border pixel 1
-hide_edge_borders both
+gaps inner 14
+gaps outer 14
+default_border pixel 2
 default_floating_border pixel 2
-set $bc #50FA7B
-client.focused $bc $bc $bc $bc $bc
-client.unfocused $bc $bc $bc $bc $bc
-client.focused_inactive $bc $bc $bc $bc $bc
+set $abc #1cbd6a
+set $ubc #454545
+client.focused $abc $abc $abc $abc $abc
+client.unfocused $ubc $ubc $ubc $ubc $ubc
+client.focused_inactive $ubc $ubc $ubc $ubc $ubc
 
 # keybindings
 set $mod Mod4
 floating_modifier $mod
-bindsym $mod+shift+Return exec --no-startup-id alacritty
+bindsym $mod+shift+Return exec --no-startup-id kitty 
 bindsym $mod+b exec firefox
-bindsym $mod+Return exec rofi -show drun drun-icon-theme .icons/Tela-blue-dark
+bindsym $mod+Return exec rofi -show drun
 bindsym $mod+e exec pcmanfm
+bindsym $mod+Control+Return exec flameshot gui
 bindsym $mod+q kill
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
+bindsym Control+Shift+k exec --no-startup-id pulsemixer --change-volume +5
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5
+bindsym Control+Shift+j exec --no-startup-id pulsemixer --change-volume -5
 bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute
+bindsym Control+Shift+m exec --no-startup-id pulsemixer --toggle-mute
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl --device='asus::kbd_backlight' set 1+
