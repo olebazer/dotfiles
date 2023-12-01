@@ -18,8 +18,10 @@ set fillchars=eob:\
 set background=dark
 
 " keybindings
-inoremap <C-c> <ESC>
 nnoremap <C-i> :NvimTreeToggle<CR>
+nnoremap <C-c> :set colorcolumn=80<CR>
+nnoremap <C-x> :set colorcolumn=0<CR>
+nnoremap <C-v> gg=G
 
 " advanced configuration in lua
 lua << EOF
