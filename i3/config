@@ -13,6 +13,9 @@ set $ubc #454545
 client.focused $abc $abc $abc $abc $abc
 client.unfocused $ubc $ubc $ubc $ubc $ubc
 client.focused_inactive $ubc $ubc $ubc $ubc $ubc
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl --device='asus::kbd_backlight' set 1+
 
 # keybindings
 set $mod Mod4
@@ -28,10 +31,7 @@ bindsym Control+Shift+k exec --no-startup-id pulsemixer --change-volume +5
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5
 bindsym Control+Shift+j exec --no-startup-id pulsemixer --change-volume -5
 bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute
-bindsym Control+Shift+m exec --no-startup-id pulsemixer --toggle-mute
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
-bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl --device='asus::kbd_backlight' set 1+
+bindsym Control+Shift+m exec --no-startup-id pulsemixer --toggle-mute 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
