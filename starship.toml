@@ -14,6 +14,7 @@ format = '[@$hostname](bold blue)'
 
 [directory]
 format = ':[$path](bold green)'
+truncate_to_repo = false
 
 [character]
 success_symbol = '[\$](white)'
