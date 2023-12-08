@@ -32,11 +32,15 @@ nnoremap <C-l> de
 nnoremap <S-h> d0
 nnoremap <S-l> d$
 nnoremap <C-n> 0
+vnoremap <C-n> 0
 nnoremap <C-p> $
+vnoremap <C-p> $
 nnoremap <C-j> :nohlsearch<CR>
 nnoremap <C-m> o<ESC>
 nnoremap <C-o> <S-o><ESC>
 inoremap <C-k> <ESC>
+cnoremap <C-k> <ESC>
+vnoremap <C-k> <ESC>
 vnoremap <S-k> {
 vnoremap <S-j> }
 
