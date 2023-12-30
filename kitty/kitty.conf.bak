@@ -1,0 +1,86 @@
+# font
+font_family CaskaydiaMono Nerd Font Mono 
+font_size 12.0
+disable_ligatures always
+
+# lines
+adjust_line_height 1
+adjust_column_width 1
+
+# mouse
+mouse_hide_wait 1.0
+
+# cursor
+cursor_blink_interval 0
+
+# links
+open_url_with default
+url_style curly
+
+# bell
+enable_audio_bell no
+visual_bell_duration 0.0
+command_on_bell none
+
+# window
+remember_window_size  no
+initial_window_width  1100
+initial_window_height 650
+hide_window_decorations no
+
+# shell
+shell_integration disabled
+shell /usr/bin/zsh
+
+# opacity
+background_opacity 1.0
+
+# layout
+enabled_layouts splits
+
+# keybindings
+map ctrl+plus change_font_size all +1.0
+map ctrl+minus change_font_size all -1.0
+map ctrl+backspace change_font_size all 0
+map ctrl+alt+l resize_window narrower
+map ctrl+alt+h resize_window wider
+map ctrl+alt+k resize_window taller
+map ctrl+alt+j resize_window shorter
+map ctrl+alt+minus launch --location=hsplit
+map ctrl+alt+plus launch --location=vsplit
+map super+control+h neighboring_window left
+map super+control+l neighboring_window right
+map super+control+k neighboring_window up
+map super+control+j neighboring_window down
+
+# borders
+window_border_width 1pt
+
+# colors
+foreground #dedede
+background #171716
+selection_foreground none
+selection_background #454545
+cursor #dedede
+cursor_text_color #000000
+url_color #0000ff
+active_border_color #44475a
+inactive_border_color #44475a
+bell_border_color #eeeeee
+visual_bell_color none
+color0 #000000
+color8 #454545
+color1 #e12323
+color9 #ff7566
+color2 #1cbd6a
+color10 #00ce64
+color3  #dec12b
+color11 #ffde35
+color4  #1a73e8
+color12 #0a66ec
+color5  #ba72e0
+color13 #c14dff
+color6  #33a8bb
+color14 #6bcaff
+color7  #eeeeee
+color15 #ffffff

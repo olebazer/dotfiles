@@ -1,15 +1,16 @@
 # startup services
+exec --no-startup-id setxkbmap -layout de &
 exec --no-startup-id polybar &
 exec --no-startup-id picom &
 exec --no-startup-id nitrogen --restore &
 
 # gaps and borders
-gaps inner 14
-gaps outer 14
+gaps inner 16
+gaps outer 12
 default_border pixel 2
 default_floating_border pixel 2
-set $abc #1cbd6a
-set $ubc #454545
+set $abc #98c379
+set $ubc #393e48
 client.focused $abc $abc $abc $abc $abc
 client.unfocused $ubc $ubc $ubc $ubc $ubc
 client.focused_inactive $ubc $ubc $ubc $ubc $ubc
@@ -18,10 +19,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl --device='asus::kbd_backlight' set 1+
 
 # keybindings
-set $mod Mod4
+set $mod Mod1
 floating_modifier $mod
 bindsym $mod+shift+Return exec --no-startup-id kitty 
-bindsym $mod+b exec firefox
+bindsym $mod+b exec brave 
 bindsym $mod+Return exec rofi -show drun
 bindsym $mod+e exec pcmanfm
 bindsym $mod+Control+Return exec flameshot gui
@@ -65,19 +66,19 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Control+l resize shrink width 5 px or 5 ppt
-bindsym $mod+Control+j resize grow height 5 px or 5 ppt
-bindsym $mod+Control+k resize shrink height 5 px or 5 ppt
-bindsym $mod+Control+h resize grow width 5 px or 5 ppt
+bindsym Mod4+1 move container to workspace number $ws1
+bindsym Mod4+2 move container to workspace number $ws2
+bindsym Mod4+3 move container to workspace number $ws3
+bindsym Mod4+4 move container to workspace number $ws4
+bindsym Mod4+5 move container to workspace number $ws5
+bindsym Mod4+6 move container to workspace number $ws6
+bindsym Mod4+7 move container to workspace number $ws7
+bindsym Mod4+8 move container to workspace number $ws8
+bindsym Mod4+9 move container to workspace number $ws9
+bindsym Mod4+0 move container to workspace number $ws10
+bindsym Mod4+c reload
+bindsym Mod4+r restart
+bindsym Mod4+l resize shrink width 5 px or 5 ppt
+bindsym Mod4+j resize grow height 5 px or 5 ppt
+bindsym Mod4+k resize shrink height 5 px or 5 ppt
+bindsym Mod4+h resize grow width 5 px or 5 ppt
