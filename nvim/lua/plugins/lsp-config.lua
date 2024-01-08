@@ -43,13 +43,13 @@ return {
                 window = {
                     completion = cmp.config.window.bordered({
                         --border = { "+", "-", "+", "|", "+", "-", "+", "|" },
-                        border = { "", "", "", "", "", "", "", "" },
+                        --border = { "", "", "", "", "", "", "", "" },
                         --winhighlight = "Normal:MyCompMenu,FloatBorder:MyCompMenu,CursorLine:MyCompSel",
                         winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel",
                     }),
                     documentation = cmp.config.window.bordered({
                         --border = { "+", "-", "+", "|", "+", "-", "+", "|" },
-                        border = { "", "", "", "", "", "", "", "" },
+                        --border = { "", "", "", "", "", "", "", "" },
                         --winhighlight = "Normal:MyDocWin,FloatBorder:MyDocWin,CursorLine:None",
                         winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel",
                     }),
@@ -115,12 +115,6 @@ return {
             lspconfig["emmet_language_server"].setup({
                 capabilities = capabilities,
             })
-            lspconfig["eslint"].setup({
-                capabilities = capabilities,
-            })
-            lspconfig["gopls"].setup({
-                capabilities = capabilities,
-            })
         end,
     },
     {
@@ -133,8 +127,6 @@ return {
                     null_ls.builtins.formatting.prettier,
                     null_ls.builtins.formatting.clang_format,
                     null_ls.builtins.formatting.black,
-                    null_ls.builtins.formatting.golines,
-                    null_ls.builtins.diagnostics.gospel,
                 },
             })
         end,

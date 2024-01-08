@@ -1,0 +1,100 @@
+# start status bar
+exec --no-startup-id waybar &
+
+# configure keyboard
+input * {
+    xkb_layout de
+}
+
+# configure monitors
+output HDMI-A-1 pos 0 0 res 2560x1440
+output eDP-1 disable
+
+# set wallpaper
+output * bg ~/Bilder/wallpaper/spidermanjump.jpg fill
+
+# gaps and borders
+gaps inner 16
+gaps outer 12
+default_border pixel 2
+default_floating_border pixel 2
+set $abc #66bb6a
+set $ubc #000000
+client.focused $abc $abc $abc $abc $abc
+client.unfocused $ubc $ubc $ubc $ubc $ubc
+client.focused_inactive $ubc $ubc $ubc $ubc $ubc
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl --device='asus::kbd_backlight' set 1+
+corner_radius 6
+
+# blur and dim effects
+blur enable
+blur_passes 2
+blur_radius 7
+default_dim_inactive 0.25
+
+# keybindings
+set $mod Mod4
+floating_modifier $mod
+bindsym $mod+shift+Return exec --no-startup-id kitty 
+bindsym $mod+b exec firefox 
+bindsym $mod+e exec pcmanfm
+bindsym $mod+Return exec wofi --show drun
+bindsym $mod+Control+Return exec grim
+bindsym $mod+q kill
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
+bindsym Control+Shift+k exec --no-startup-id pulsemixer --change-volume +5
+bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5
+bindsym Control+Shift+j exec --no-startup-id pulsemixer --change-volume -5
+bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute
+bindsym Control+Shift+m exec --no-startup-id pulsemixer --toggle-mute 
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+plus split h
+bindsym $mod+minus split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+bindsym Mod1+1 move container to workspace number $ws1
+bindsym Mod1+2 move container to workspace number $ws2
+bindsym Mod1+3 move container to workspace number $ws3
+bindsym Mod1+4 move container to workspace number $ws4
+bindsym Mod1+5 move container to workspace number $ws5
+bindsym Mod1+6 move container to workspace number $ws6
+bindsym Mod1+7 move container to workspace number $ws7
+bindsym Mod1+8 move container to workspace number $ws8
+bindsym Mod1+9 move container to workspace number $ws9
+bindsym Mod1+0 move container to workspace number $ws10
+bindsym Mod1+c reload
+bindsym Mod1+r restart
+bindsym Mod1+l resize shrink width 5 px or 5 ppt
+bindsym Mod1+j resize grow height 5 px or 5 ppt
+bindsym Mod1+k resize shrink height 5 px or 5 ppt
+bindsym Mod1+h resize grow width 5 px or 5 ppt

@@ -4,5 +4,4 @@
 --
 
 require("basics")
-require("keybindings")
 require("lazy-config")
