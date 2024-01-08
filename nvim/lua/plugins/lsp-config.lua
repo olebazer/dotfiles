@@ -7,9 +7,6 @@ return {
             "williamboman/mason.nvim",
             "neovim/nvim-lspconfig",
         },
-        opts = {
-            auto_install = true,
-        },
         config = function()
             require("mason-lspconfig").setup({})
             require("mason").setup({
@@ -46,19 +43,23 @@ return {
                 window = {
                     completion = cmp.config.window.bordered({
                         --border = { "+", "-", "+", "|", "+", "-", "+", "|" },
-                        winhighlight = "Normal:MyCompMenu,FloatBorder:MyCompMenu,CursorLine:MyCompSel",
+                        border = { "", "", "", "", "", "", "", "" },
+                        --winhighlight = "Normal:MyCompMenu,FloatBorder:MyCompMenu,CursorLine:MyCompSel",
+                        winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel",
                     }),
                     documentation = cmp.config.window.bordered({
                         --border = { "+", "-", "+", "|", "+", "-", "+", "|" },
-                        winhighlight = "Normal:MyDocWin,FloatBorder:MyDocWin,CursorLine:None",
+                        border = { "", "", "", "", "", "", "", "" },
+                        --winhighlight = "Normal:MyDocWin,FloatBorder:MyDocWin,CursorLine:None",
+                        winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel",
                     }),
                 },
                 mapping = cmp.mapping.preset.insert({
                     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                     ["<C-u>"] = cmp.mapping.scroll_docs(4),
-                    ["<C-o>"] = cmp.mapping.complete(),
+                    ["<C-j>"] = cmp.mapping.complete(),
                     ["<C-e>"] = cmp.mapping.abort(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                    ["<C-Space>"] = cmp.mapping.confirm({ select = true }),
                 }),
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
@@ -114,6 +115,12 @@ return {
             lspconfig["emmet_language_server"].setup({
                 capabilities = capabilities,
             })
+            lspconfig["eslint"].setup({
+                capabilities = capabilities,
+            })
+            lspconfig["gopls"].setup({
+                capabilities = capabilities,
+            })
         end,
     },
     {
@@ -126,7 +133,8 @@ return {
                     null_ls.builtins.formatting.prettier,
                     null_ls.builtins.formatting.clang_format,
                     null_ls.builtins.formatting.black,
-                    null_ls.builtins.diagnostics.eslint_d,
+                    null_ls.builtins.formatting.golines,
+                    null_ls.builtins.diagnostics.gospel,
                 },
             })
         end,

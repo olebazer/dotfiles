@@ -2,7 +2,7 @@
 
 local map = vim.keymap.set
 vim.g.mapleader = " "
-map({ "i", "v", "c" }, "<C-Space>", "<ESC>", { desc = "Escape" })
+map({ "i", "v", "c" }, "<C-o>", "<Esc>", { desc = "Escape" })
 map("n", "<C-c>", "<CMD>set colorcolumn=80<CR>", { desc = "set colorcolumn" })
 map("n", "<C-x>", "<CMD>set colorcolumn=0<CR>", { desc = "remove colorcolumn" })
 map("n", "<C-v>", "gg=G", { desc = "format entire file with neovim" })
@@ -19,3 +19,4 @@ map("n", "<leader>gh", vim.lsp.buf.hover, { desc = "hover over keyword" })
 map("n", "<leader>gd", vim.lsp.buf.definition, { desc = "go to definition" })
 map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "perform code action" })
 map("n", "<leader>gf", vim.lsp.buf.format, { desc = "format entire file with specific formatter" })
+map("n", "<leader>ez", "<CMD>ZenMode<CR>", { desc = "enable zen mode" })
