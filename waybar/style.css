@@ -1,12 +1,12 @@
 * {
     all: unset;
     margin: 0;
+    font-family: 'CaskaydiaCove Nerd Font';
 }
 
 window#waybar {
-    font-family: 'CaskaydiaCove Nerd Font';
-    background-color: #000000;
-    color: #66bb6a;
+    background-color: #11111b;
+    color: #11111b;
 }
 
 #workspaces button,
@@ -16,7 +16,6 @@ window#waybar {
 #pulseaudio {
     border-radius: 6px;
     font-size: 14px;
-    color: #000000;
     margin-left: 4px;
     margin-right: 4px;
     padding-left: 12px;
@@ -26,7 +25,7 @@ window#waybar {
 }
 
 #window {
-    background-color: #F2D5CF;
+    background-color: #E5C890;
     margin-left: 0;
     margin-left: 4px;
 }
@@ -36,24 +35,24 @@ window#waybar {
 }
 
 #workspaces button label {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #workspaces button {
-    background-color: #66bb6a;
+    background-color: #A6E3A1;
 }
 
 #workspaces button.focused {
-    background-color: #7287FD;
+    background-color: #87B0F9;
 }
 
 #workspaces button.urgent {
-    background-color: #ff0000;
+    background-color: #ED8796;
 }
 
 #clock {
     background-color: #414559;
-    color: #dddddd;
+    color: #D9E0EE;
     font-size: 16px;
 }
 

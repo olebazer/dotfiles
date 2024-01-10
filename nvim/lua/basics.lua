@@ -24,7 +24,6 @@ vim.opt.fillchars = "eob: "
 -- Keybindings
 local map = vim.keymap.set
 vim.g.mapleader = " "
-map({ "i", "v", "c" }, "<C-o>", "<Esc>", { desc = "Escape" })
 map("n", "<C-c>", "<CMD>set colorcolumn=80<CR>", { desc = "set colorcolumn" })
 map("n", "<C-x>", "<CMD>set colorcolumn=0<CR>", { desc = "remove colorcolumn" })
 map("n", "<C-v>", "gg=G", { desc = "format entire file with neovim" })

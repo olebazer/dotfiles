@@ -11,8 +11,8 @@ return {
             require("mason-lspconfig").setup({})
             require("mason").setup({
                 ui = {
-                    --width = 1.0,
-                    --height = 1.0,
+                    width = 1.0,
+                    height = 1.0,
                 },
             })
         end,
@@ -30,9 +30,9 @@ return {
         },
         config = function()
             require("luasnip.loaders.from_vscode").lazy_load()
-            vim.api.nvim_set_hl(0, "MyCompMenu", { bg = "None", fg = "White" })
-            vim.api.nvim_set_hl(0, "MyCompSel", { bg = "White", fg = "Black", bold = true })
-            vim.api.nvim_set_hl(0, "MyDocWin", { bg = "None", fg = "White" })
+            vim.api.nvim_set_hl(0, "MyCompMenu", { bg = "#232634", fg = "#D9E0EE" })
+            vim.api.nvim_set_hl(0, "MyCompSel", { bg = "#D9E0EE", fg = "#232634", bold = true })
+            vim.api.nvim_set_hl(0, "MyDocWin", { bg = "#232634", fg = "#D9E0EE" })
             local cmp = require("cmp")
             cmp.setup({
                 snippet = {
@@ -46,12 +46,14 @@ return {
                         --border = { "", "", "", "", "", "", "", "" },
                         --winhighlight = "Normal:MyCompMenu,FloatBorder:MyCompMenu,CursorLine:MyCompSel",
                         winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel",
+                        --winhighlight = "Normal:MyCompMenu,FloatBorder:MyCompMenu,CursorLine:MyCompSel",
                     }),
                     documentation = cmp.config.window.bordered({
                         --border = { "+", "-", "+", "|", "+", "-", "+", "|" },
                         --border = { "", "", "", "", "", "", "", "" },
                         --winhighlight = "Normal:MyDocWin,FloatBorder:MyDocWin,CursorLine:None",
                         winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel",
+                        --winhighlight = "Normal:MyCompMenu,FloatBorder:MyCompMenu,CursorLine:MyCompSel",
                     }),
                 },
                 mapping = cmp.mapping.preset.insert({

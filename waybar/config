@@ -23,8 +23,7 @@
         }
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%d.%m.%Y}"
     },
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) ",
@@ -39,7 +38,8 @@
         "format": " {volume}%",
         "format-bluetooth": " {volume}% ",
         "format-bluetooth-muted": "󰖁 muted ",
-        "format-muted": "󰖁 muted"
+        "format-muted": "󰖁 muted",
+        "on-click": "pavucontrol"
     }
 }
 

@@ -1,9 +1,15 @@
+# correctly start sway
+exec --no-startup-id systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP &
+exec --no-startup-id dbus-update-activation-environment 2>/dev/null && \
+    dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+
 # start status bar
 exec --no-startup-id waybar &
 
 # configure keyboard
 input * {
     xkb_layout de
+    xkb_options caps:swapescape
 }
 
 # configure monitors
@@ -11,28 +17,28 @@ output HDMI-A-1 pos 0 0 res 2560x1440
 output eDP-1 disable
 
 # set wallpaper
-output * bg ~/Bilder/wallpaper/spidermanjump.jpg fill
+output * bg ~/Bilder/wallpaper/blackhole.jpg fill
 
 # gaps and borders
 gaps inner 16
 gaps outer 12
 default_border pixel 2
 default_floating_border pixel 2
-set $abc #66bb6a
-set $ubc #000000
+set $abc #87B0F9
+set $ubc #11111b
 client.focused $abc $abc $abc $abc $abc
 client.unfocused $ubc $ubc $ubc $ubc $ubc
 client.focused_inactive $ubc $ubc $ubc $ubc $ubc
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl --device='asus::kbd_backlight' set 1+
-corner_radius 6
+corner_radius 8
 
 # blur and dim effects
 blur enable
-blur_passes 2
-blur_radius 7
-default_dim_inactive 0.25
+blur_passes 5
+blur_radius 2
+default_dim_inactive 0.0
 
 # keybindings
 set $mod Mod4
@@ -92,8 +98,9 @@ bindsym Mod1+7 move container to workspace number $ws7
 bindsym Mod1+8 move container to workspace number $ws8
 bindsym Mod1+9 move container to workspace number $ws9
 bindsym Mod1+0 move container to workspace number $ws10
-bindsym Mod1+c reload
-bindsym Mod1+r restart
+bindsym Mod1+Control+c reload
+bindsym Mod1+Control+r restart
+bindsym Mod1+Control+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 bindsym Mod1+l resize shrink width 5 px or 5 ppt
 bindsym Mod1+j resize grow height 5 px or 5 ppt
 bindsym Mod1+k resize shrink height 5 px or 5 ppt
