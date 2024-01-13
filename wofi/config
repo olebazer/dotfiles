@@ -1,0 +1,10 @@
+show=drun
+width=482
+height=654
+always_parse_args=true
+show_all=true
+hide_scroll=false
+prompt=Search for some programs...
+columns=1
+allow_images=true
+icon_theme=papirus-dark
