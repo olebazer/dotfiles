@@ -1,0 +1,15 @@
+themes {
+    bazerTheme {
+        fg "#676767"
+        bg "#000000"
+        black "#000000"
+        red "#ff0000"
+        green "#68994e"
+        yellow "#00ffff"
+        blue "#0000ff"
+        magenta "#ffff00"
+        cyan "#00aa55"
+        white "#676767"
+        orange "#aa0055"
+    }
+}
