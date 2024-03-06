@@ -1,43 +1,37 @@
--- Basic options
+-- basic settings
 
-vim.opt.swapfile = false
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.ruler = false
+vim.opt.mouse = "a"
+vim.opt.guicursor = "i:block"
 vim.opt.showmode = false
-vim.opt.showcmd = false
-vim.opt.cmdheight = 1
+vim.opt.clipboard = "unnamedplus"
+vim.opt.breakindent = true
+vim.opt.undofile = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.signcolumn = "number"
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.list = true
+vim.opt.listchars = { tab = "> ", trail = ".", nbsp = "_" }
+vim.opt.scrolloff = 10
+vim.opt.hlsearch = true
+vim.opt.laststatus = 0
+vim.opt.cmdheight = 0
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-vim.opt.completeopt = "menuone,noinsert,noselect"
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.laststatus = 0
-vim.opt.mouse = "a"
-vim.opt.clipboard = "unnamedplus"
-vim.opt.termguicolors = true
---vim.opt.guicursor = "i:block"
+vim.opt.autoindent = true
 vim.opt.fillchars = "eob: "
 
--- Keybindings
-local map = vim.keymap.set
-vim.g.mapleader = " "
-map("n", "<C-c>", "<CMD>set colorcolumn=80<CR>", { desc = "set colorcolumn" })
-map("n", "<C-x>", "<CMD>set colorcolumn=0<CR>", { desc = "remove colorcolumn" })
-map("n", "<C-v>", "gg=G", { desc = "format entire file with neovim" })
-map("n", "gs", ":%s/", { desc = "substitute search" })
-map("n", "<leader>ou", "O<ESC>", { desc = "insert new line above without leaving normal mode" })
-map("n", "<leader>ob", "o<ESC>", { desc = "insert new line blow without leaving normal mode" })
-map({ "n", "v" }, "<C-u>", "{", { desc = "jump up one block" })
-map({ "n", "v" }, "<C-b>", "}", { desc = "jump down one block" })
-map("n", "<C-o>", "<CMD>nohlsearch<CR>", { desc = "remove highlight after search" })
-map("n", "<C-n>", "<CMD>NvimTreeToggle<CR>", { desc = "open file explorer tree" })
-map("n", "<C-p>", "<CMD>Telescope find_files<CR>", { desc = "find files with Telescope" })
-map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", { desc = "live grep with Telescope" })
-map("n", "<leader>gh", vim.lsp.buf.hover, { desc = "hover over keyword" })
-map("n", "<leader>gd", vim.lsp.buf.definition, { desc = "go to definition" })
-map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "perform code action" })
-map("n", "<leader>gf", vim.lsp.buf.format, { desc = "format entire file with specific formatter" })
-map("n", "<leader>ez", "<CMD>ZenMode<CR>", { desc = "enable zen mode" })
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Turn off search highlighting" })
+vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle nvim tree" })
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })

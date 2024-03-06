@@ -1,7 +1,7 @@
 --
--- Neovim configuraion
+-- NEOVIM CONFIGURATION
 -- ~/.config/nvim/init.lua
 --
 
 require("basics")
-require("lazy-config")
+require("lazy_config")
