@@ -1,11 +1,11 @@
 {
-    "layer": "top", 
-    "position": "top", 
+    "layer": "top",
+    "position": "top",
     "height": 36,
-    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "network"],
-    "sway/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{icon}",
@@ -28,10 +28,8 @@
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected 󰖪",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         "scroll-step": 5,
@@ -42,4 +40,3 @@
         "on-click": "pavucontrol"
     }
 }
-
