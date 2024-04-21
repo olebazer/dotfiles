@@ -4,29 +4,18 @@
 
 # oh-my-zsh configuration
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(
-    git
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-)
+ZSH_THEME="earl"
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # aliases
-alias ls='eza --icons'
-alias ll='eza -l --icons'
-alias la='eza -la --icons'
+alias ls='ls --color=auto'
+alias ll='ls -lh --color=auto'
+alias la='ls -lah --color=auto'
 alias vim='nvim'
 
 # keybindings
-bindkey "^@" autosuggest-accept
+set -o vi
+KEYTIMEOUT=10
 bindkey "^P" history-search-backward
 bindkey "^N" history-search-forward
-bindkey "^H" beginning-of-line
-bindkey "^J" end-of-line
-bindkey "^U" kill-whole-line
-bindkey "^O" forward-word
-bindkey "^K" backward-word
-
-# use starship prompt
-#eval "$(starship init zsh)"
