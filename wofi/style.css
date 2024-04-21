@@ -1,77 +1,69 @@
 * {
-  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  font-family: 'CaskaydiaMono Nerd Font', monospace;
   font-size: 14px;
   border-radius: 0.75em;
+  background-color: #000000;
 }
 
 #window {
   margin: 0px;
   padding: 10px;
-  border: 0.16em solid #A6E3A1;
-  background-color: #11111b;
+  border: 0.16em solid #ffffff;
 }
 
 #inner-box {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: #11111b;
 }
 
 #outer-box {
   margin: 5px;
   padding: 10px;
   border: none;
-  background-color: #11111b;
 }
 
 #scroll {
   margin: 0px;
   padding: 10px;
   border: none;
-  background-color: #11111b;
 }
 
 #input {
-  margin: 5px 20px;
-  padding: 10px;
-  border: none;
-  color: #cdd6f4;
-  background-color: #11111b;
+  margin: 5px 16px;
+  padding: 8px;
+  border: 2px solid #0000ff;
+  color: #ffffff;
+}
+
+#input:focus {
+  box-shadow: none;
 }
 
 #input image {
     border: none;
-    color: #A6E3A1;
-}
-
-#input * {
-  outline: 4px solid #A6E3A1;
+    color: #ffffff;
 }
 
 #text {
   margin: 5px;
   border: none;
-  color: #cdd6f4;
-}
-
-#entry {
-  background-color: #11111b;
+  color: #ffffff;
 }
 
 #entry arrow {
   border: none;
-  color: #87b0f9;
+  color: #0000ff;
 }
 
 #entry:selected {
-  border: 0.11em solid #87b0f9;
+  border: 0.11em solid #00ff00;
 }
 
 #entry:selected #text {
-  color: #94e2d5;
+  color: #ffffff;
 }
 
 #entry:drop(active) {
-  background-color: #87b0f9;
+  background-color: #ffffff;
 }
