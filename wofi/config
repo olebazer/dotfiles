@@ -1,10 +1,10 @@
 show=drun
-width=482
-height=654
+width=520
+height=640
 always_parse_args=true
 show_all=true
 hide_scroll=false
-prompt=Search for some programs...
+prompt=Search for a program...
 columns=1
 allow_images=true
-icon_theme=papirus-dark
+icon_theme=Tela-blue-dark
