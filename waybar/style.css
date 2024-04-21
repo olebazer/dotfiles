@@ -1,12 +1,12 @@
 * {
     all: unset;
     margin: 0;
-    font-family: 'CaskaydiaCove Nerd Font';
+    font-family: 'CaskaydiaMono Nerd Font';
 }
 
 window#waybar {
-    background-color: #11111b;
-    color: #11111b;
+    background-color: #011418;
+    color: #011418;
 }
 
 #workspaces button,
@@ -25,7 +25,7 @@ window#waybar {
 }
 
 #window {
-    background-color: #E5C890;
+    background-color: #859900;
     margin-left: 0;
     margin-left: 4px;
 }
@@ -38,37 +38,39 @@ window#waybar {
     font-size: 18px;
 }
 
-#workspaces button {
-    background-color: #A6E3A1;
+#workspaces button.active {
+    background-color: #268bd2;
+    color: #011418;
 }
 
-#workspaces button.focused {
-    background-color: #87B0F9;
+#workspaces button {
+    background-color: #073642;
+    color: #4c4c4c;
 }
 
 #workspaces button.urgent {
-    background-color: #ED8796;
+    background-color: #dc322f;
+    color: #011418;
 }
 
 #clock {
-    background-color: #414559;
-    color: #D9E0EE;
+    background-color: #839496;
     font-size: 16px;
 }
 
 #network {
-    background-color: #94E2D5;
+    background-color: #2aa198;
 }
 
 #network.disconnected {
-    background-color: #343434;
+    background-color: #93a1a1;
     color: #F2D5CF;
 }
 
 #pulseaudio {
-    background-color: #CA9EE6;
+    background-color: #6c71c4;
 }
 
 #pulseaudio.muted {
-    background-color: #CA9EE6;
+    background-color: #4c4c4c;
 }
